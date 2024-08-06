@@ -78,7 +78,33 @@ body {
 	padding: 0;
 	margin: 0;
 }
-header,
-main {
-	padding: 10px;
+@media screen and (max-width: 375px) {
+	header,
+	main {
+		padding: 10px 10px;
+	}
+}
+@media screen and (min-width: 375px) and (max-width: 480px) {
+	header,
+	main {
+		padding: 10px 10px;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+	header,
+	main {
+		padding: 10px 15px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+	header,
+	main {
+		padding: 10px 20px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	header,
+	main {
+		padding: 10px 25px;
+	}
 }
