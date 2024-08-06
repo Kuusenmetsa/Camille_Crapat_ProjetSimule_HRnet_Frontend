@@ -5,9 +5,9 @@ import { Provider } from 'react-redux';
 
 import './global.css';
 
-import Home from './Home';
-import Employees from './Employees';
-import Error from './Error';
+import Home from './pages/Home';
+import Employees from './pages/Employees';
+import Error from './pages/Error';
 
 import { store } from './utils/Store';
 
