@@ -1,0 +1,28 @@
+.listEmployees__dataTable {
+	display: flex;
+	flex-direction: column;
+}
+.listEmployees__dataTable__search {
+	width: 20%;
+	margin-bottom: 15px;
+	align-self: flex-end;
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (min-width: 375px) and (max-width: 480px) {
+}
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+	.listEmployees {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+	.listEmployees {
+		width: 95%;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.listEmployees {
+		width: 80%;
+	}
+}
