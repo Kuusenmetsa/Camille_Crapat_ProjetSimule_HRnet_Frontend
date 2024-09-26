@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "ag-grid-react": "^32.2.0",
+    "dropzy": "file:lib/dropzy-1.0.0.tgz",
     "react": "^18.3.1",
     "react-datepicker": "^7.4.0",
     "react-dom": "^18.3.1",
