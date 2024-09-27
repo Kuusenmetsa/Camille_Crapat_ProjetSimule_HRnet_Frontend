@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { AgGridReact } from 'ag-grid-react';
 
@@ -20,8 +20,14 @@ export default function Employees() {
 		{ field: 'ZIPCode', flex: 1 },
 	];
 
+	const gridRef = useRef();
+
 	useEffect(() => {
 		document.title = 'HRnet | Current employees';
+	}, []);
+
+	const onFilterTextBoxChanged = useCallback(() => {
+		gridRef.current.api.setGridOption('quickFilterText', document.getElementById('filter-text-box').value);
 	}, []);
 
 	return (
@@ -34,9 +40,11 @@ export default function Employees() {
 						id='filter-text-box'
 						placeholder='Search...'
 						className='listEmployees__dataTable__search'
+						onInput={onFilterTextBoxChanged}
 					/>
 					<div className='ag-theme-quartz' style={{ height: 519, width: '100%' }}>
 						<AgGridReact
+							ref={gridRef}
 							rowData={employeesSelector}
 							columnDefs={columns}
 							style={{ height: '100%', width: '100%' }}
