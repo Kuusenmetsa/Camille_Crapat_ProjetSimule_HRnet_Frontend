@@ -198,7 +198,7 @@ export default function Home() {
 									placeholder='First Name'
 									onChange={(e) => setFirstname(e.target.value)}
 									value={firstname}
-									tabIndex={1}
+									tabIndex={0}
 								/>
 							</div>
 							<div className='form__labelInput'>
@@ -213,7 +213,7 @@ export default function Home() {
 									placeholder='Last Name'
 									onChange={(e) => setLastname(e.target.value)}
 									value={lastname}
-									tabIndex={2}
+									tabIndex={0}
 								/>
 							</div>
 							<div className='form__labelInput'>
@@ -224,7 +224,7 @@ export default function Home() {
 									selected={dateOfBirth}
 									onChange={(date) => setDateOfBirth(date)}
 									className='form__address__labelInput__input form__address__labelInput__input--datepicker'
-									tabIndex={3}
+									tabIndex={0}
 								/>
 							</div>
 							<div className='form__labelInput'>
@@ -235,7 +235,7 @@ export default function Home() {
 									selected={startDate}
 									onChange={(date) => setStartDate(date)}
 									className='form__address__labelInput__input form__address__labelInput__input--datepicker'
-									tabIndex={4}
+									tabIndex={0}
 								/>
 							</div>
 							<div className='form__labelInput'>
@@ -247,7 +247,7 @@ export default function Home() {
 									setValue={setDepartment}
 									options={departmentData}
 									color={'#91ad17'}
-									tabIndex={5}
+									tabIndex={0}
 								/>
 							</div>
 						</div>
@@ -266,7 +266,7 @@ export default function Home() {
 										placeholder='Street'
 										onChange={(e) => setStreet(e.target.value)}
 										value={street}
-										tabIndex={6}
+										tabIndex={0}
 									/>
 								</div>
 								<div className='form__address__labelInput'>
@@ -281,7 +281,7 @@ export default function Home() {
 										placeholder='City'
 										onChange={(e) => setCity(e.target.value)}
 										value={city}
-										tabIndex={7}
+										tabIndex={0}
 									/>
 								</div>
 								<div className='form__address__labelInput'>
@@ -293,7 +293,7 @@ export default function Home() {
 										setValue={setState}
 										options={formatData(stateData)}
 										color={'#91ad17'}
-										tabIndex={8}
+										tabIndex={0}
 									/>
 								</div>
 								<div className='form__address__labelInput'>
@@ -308,7 +308,7 @@ export default function Home() {
 										placeholder='ZIP Code'
 										onChange={(e) => setZIPCode(e.target.value)}
 										value={ZIPCode}
-										tabIndex={9}
+										tabIndex={0}
 									/>
 								</div>
 							</fieldset>
@@ -316,7 +316,7 @@ export default function Home() {
 					</div>
 					{error && <span className='errorForm'>{errorMessage}</span>}
 					<div className='form--bottom'>
-						<input type='submit' value='Save' className='form__button' tabIndex={10} />
+						<input type='submit' value='Save' className='form__button' tabIndex={0} />
 						<input
 							type='reset'
 							value='Reset'
@@ -324,7 +324,7 @@ export default function Home() {
 							onClick={() => {
 								resetForm();
 							}}
-							tabIndex={11}
+							tabIndex={0}
 						/>
 					</div>
 				</form>
